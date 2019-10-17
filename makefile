@@ -1,11 +1,11 @@
-all: vexillology.o main.o
-	gcc -o program vexillology.c main.c
+all: coords.o main.o
+	gcc -o program coords.c main.c
 
-main.o: main.c vexillology.h
+main.o: main.c coords.h
 	gcc -c main.c
 
-vexillology.o: vexillology.c vexillology.h
-	gcc -c vexillology.c
+coords.o: coords.c coords.h
+	gcc -c coords.c
 
 run:
 	./program
